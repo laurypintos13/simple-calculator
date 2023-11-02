@@ -69,6 +69,7 @@ form input.color{
     border: none;
     font-size: 20px;
     cursor: pointer;  
+    color:#71b1e3;  
 }
 .container p{
     font-size: 20px;
@@ -77,6 +78,9 @@ form input.color{
     color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
+}
+#btnHistoryX{
+    font-size: 27px;
 }
 @media (max-width: 806px) {
     .calculator form input{

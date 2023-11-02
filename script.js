@@ -67,7 +67,7 @@ function showLS(){
     btnHistory.addEventListener("click",(e)=>{
         e.preventDefault();
         container.innerHTML = ``
-        container.innerHTML =` <button id="btnHistoryX">❌</button>
+        container.innerHTML =` <button id="btnHistoryX">🗙</button>
                                 <button id="btnHistoryD">🗑️</button>`
         btnHistory.innerHTML = ``
 
@@ -94,6 +94,7 @@ function showLS(){
             removeLS()
             container.innerHTML =``
             btnHistory.innerHTML = `<button id="btnHistory">🕒</button>`
+
             
         })
         
