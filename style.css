@@ -32,9 +32,7 @@
     margin: 10px;
     font-weight: bold;
 }
-.calculator form input:hover{
-    box-shadow: -8px -8px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.5);
-}
+
 form .display{
     display: flex;
     justify-content: flex-end;
@@ -52,6 +50,33 @@ form input.equal{
 form input.color{
 
     background-color:#283d4d;
+}
+.containerhistory button{
+    width: 40px;
+    height: 40px;    
+    background-color: transparent;    
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.container button{
+    width: 40px;
+    height: 40px;    
+    background-color: transparent;    
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;  
+}
+.container p{
+    font-size: 20px;
+    margin: 5px;
+    padding: 1px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 @media (max-width: 806px) {
     .calculator form input{

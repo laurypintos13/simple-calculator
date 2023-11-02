@@ -26,8 +26,6 @@ registrarEvento("*");
 registrarEvento(".");
 registrarEvento("/");
 registrarEvento("0");
-registrarEvento("00");
-
 
 document.getElementById('ac').addEventListener("click",()=>{
     valueDisplay.value = ""
@@ -54,4 +52,60 @@ document.getElementById('btnEqual').addEventListener("click", (e)=>{
     opHistory.push(`${curOpHistoryConcat} = ${valueDisplay.value}`) 
     console.log(opHistory)
     curOpHistory =[]
+    saveLS()
 })
+
+let modal = document.getElementById('modal')
+
+function saveLS(){
+    localStorage.setItem('history',JSON.stringify(opHistory))
+    showLS()
+}
+
+function showLS(){
+    btnHistory =document.getElementById('btnHistory')
+    btnHistory.addEventListener("click",(e)=>{
+        e.preventDefault();
+        container.innerHTML = ``
+        container.innerHTML =` <button id="btnHistoryX">❌</button>
+                                <button id="btnHistoryD">🗑️</button>`
+        btnHistory.innerHTML = ``
+
+        opHistory = JSON.parse(localStorage.getItem('history'))
+        valueDisplay.value =""
+        if (opHistory === null){
+            opHistory = []
+        } else {
+            opHistory.map(h =>{
+                container.innerHTML += `<p>${h}</p>`
+            })    
+        }
+        
+        btnHistoryX = document.getElementById('btnHistoryX')
+        btnHistoryD = document.getElementById('btnHistoryD')
+
+        btnHistoryX.addEventListener("click",(e)=>{
+            e.preventDefault();
+            container.innerHTML =``
+            btnHistory.innerHTML = `<button id="btnHistory">🕒</button>`
+        })
+        btnHistoryD.addEventListener("click",(e)=>{
+            e.preventDefault();
+            removeLS()
+            container.innerHTML =``
+            btnHistory.innerHTML = `<button id="btnHistory">🕒</button>`
+            
+        })
+        
+    })
+    
+}
+
+function removeLS(){
+    localStorage.removeItem('history')
+}
+
+function ocultar(){
+    btnHistoryD = document.getElementById('btnHistoryD').style.display = "none"
+}
+document.querySelector('DOMContentLoaded', showLS())

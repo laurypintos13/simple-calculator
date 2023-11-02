@@ -9,9 +9,14 @@
 <body>
     <div class="container">
         <div class="calculator">
+            <div class="containerhistory">
+                <button id="btnHistory">🕒</button>
+            </div>
+            <div id="container">
+            </div>
             <form>
                 <div class="display">
-                    <input type="text" name="display" id="valueDisplay">
+                    <input type="text" name="display" id="valueDisplay">                
                 </div>
             <div>
                 <input type="button" value="AC" id="ac" class="color">
@@ -38,14 +43,15 @@
                 <input type="button" value="+" id="+" class="color">
             </div>
             <div>
-                <input type="button" value="00" id="00">
-                <input type="button" value="0" id="0">
+                
+                <input type="button" value="0" id="0" class="equal">
                 <input type="button" value="=" class="equal color" id="btnEqual">
             </div>
         </form>
         </div>
     </div>
 
+    
     <script src="script.js"></script>
 </body>
 </html>
