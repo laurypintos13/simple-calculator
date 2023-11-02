@@ -67,8 +67,11 @@ function showLS(){
     btnHistory.addEventListener("click",(e)=>{
         e.preventDefault();
         container.innerHTML = ``
-        container.innerHTML =` <button id="btnHistoryX">⬅️</button>
-                                <button id="btnHistoryD">🗑️</button>`
+        container.innerHTML =`<div class='divclear'> 
+                                <button id="btnHistoryX">Back</button>
+                                <button id="btnHistoryD">Clear history</button>
+                            </div>`
+
         btnHistory.innerHTML = ``
 
         opHistory = JSON.parse(localStorage.getItem('history'))
@@ -87,13 +90,13 @@ function showLS(){
         btnHistoryX.addEventListener("click",(e)=>{
             e.preventDefault();
             container.innerHTML =``
-            btnHistory.innerHTML = `<button id="btnHistory">🕒</button>`
+            btnHistory.innerHTML = `<button id="btnHistory">History</button>`
         })
         btnHistoryD.addEventListener("click",(e)=>{
             e.preventDefault();
             removeLS()
             container.innerHTML =``
-            btnHistory.innerHTML = `<button id="btnHistory">🕒</button>`
+            btnHistory.innerHTML = `<button id="btnHistory">History</button>`
 
             
         })
