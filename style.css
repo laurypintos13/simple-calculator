@@ -63,25 +63,24 @@ form input.color{
 }
 .container button{
     width: 40px;
-    height: 40px;    
+    height: 40px; 
+    margin: 5px 5px;   
     background-color: transparent;    
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;  
     color:#71b1e3;  
 }
 .container p{
-    font-size: 20px;
-    margin: 5px;
-    padding: 1px;
+    font-size: 23px;
+    margin: 0px 5px;
+    padding: 3px;
     color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
 }
-#btnHistoryX{
-    font-size: 27px;
-}
+
 @media (max-width: 806px) {
     .calculator form input{
         width: 60px;
